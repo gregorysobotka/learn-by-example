@@ -1,0 +1,21 @@
+{
+  "name": "simple-cluster-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run start:cluster",
+    "start:cluster": "DEBUG=njs* nodemon -r esm multi-app.js",
+    "start:standalone": "DEBUG=njs* nodemon -r esm single-app.js"
+  },
+  "author": "Gregory Sobotka",
+  "license": "ISC",
+  "dependencies": {
+    "debug": "^4.1.1",
+    "esm": "^3.2.4",
+    "express": "^4.16.4",
+    "nodemon": "^1.18.10",
+    "uuid": "^3.3.2"
+  }
+}
