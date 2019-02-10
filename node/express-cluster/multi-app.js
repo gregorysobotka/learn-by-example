@@ -8,7 +8,7 @@ const log = logger('clustered.js')
 const { hostname, port } = config
 const cpuCount = cpus().length
 
-if (cluster.isMaster && cpuCount > 1) {
+if (cluster.isMaster) {
 
     log.info(`Starting in cluster mode...`)
     log.info(`CPU Count: ${cpuCount}`)

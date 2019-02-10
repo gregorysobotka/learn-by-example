@@ -4,14 +4,17 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm run start:cluster",
     "start:cluster": "DEBUG=njs* nodemon -r esm multi-app.js",
-    "start:standalone": "DEBUG=njs* nodemon -r esm single-app.js"
+    "start:standalone": "DEBUG=njs* nodemon -r esm single-app.js",
+    "test": "npm run test:express-cluster-minimal",
+    "test:minimal": "artillery run minimal.yml",
+    "test:moderate": "artillery run moderate.yml"
   },
   "author": "Gregory Sobotka",
   "license": "ISC",
   "dependencies": {
+    "artillery": "^1.6.0-26",
     "debug": "^4.1.1",
     "esm": "^3.2.4",
     "express": "^4.16.4",
